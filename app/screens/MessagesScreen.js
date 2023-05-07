@@ -40,14 +40,13 @@ const MessagesScreen = () => {
         data={messages}
         keyExtractor={message => message.id.toString()}
         renderItem={({ item }) => (
-          <ListItemDelete onPress={() => handleDelete(item)}>
-            <ListItem
-              onPress={() => console.log('Message selected', item)}
-              title={item.title}
-              subTitle={item.description}
-              image={item.image}
-            />
-          </ListItemDelete>
+          <ListItem
+            onPress={() => console.log('Message selected', item)}
+            title={item.title}
+            subTitle={item.description}
+            image={item.image}
+            renderRightActions={() => <ListItemDelete onPress={() => handleDelete(item)} />}
+          />
         )}
         ItemSeparatorComponent={<ListItemSeparator />}
         refreshing={refreshing}
