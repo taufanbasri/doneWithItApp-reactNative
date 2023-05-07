@@ -1,10 +1,10 @@
 import React from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet, TouchableWithoutFeedback, View } from 'react-native';
 import { GestureHandlerRootView, Swipeable } from 'react-native-gesture-handler';
 import colors from '../config/colors';
 import { MaterialCommunityIcons } from '@expo/vector-icons'
 
-const RightActions = (progress, dragX) => {
+const RightActions = (progress, dragX, onPress) => {
   const scale = dragX.interpolate({
     inputRange: [-100, 0],
     outputRange: [1, 0],
@@ -12,16 +12,18 @@ const RightActions = (progress, dragX) => {
   });
 
   return (
-    <View style={styles.container}>
-      <MaterialCommunityIcons name='trash-can' size={35} color={colors.white} />
-    </View>
+    <TouchableWithoutFeedback onPress={onPress}>
+      <View style={styles.container}>
+        <MaterialCommunityIcons name='trash-can' size={35} color={colors.white} />
+      </View>
+    </TouchableWithoutFeedback>
   );
 };
 
-const ListItemDelete = ({ children }) => {
+const ListItemDelete = ({ children, onPress }) => {
   return (
     <GestureHandlerRootView>
-      <Swipeable renderRightActions={(progress, dragX) => RightActions(progress, dragX)}>
+      <Swipeable renderRightActions={(progress, dragX) => RightActions(progress, dragX, onPress)}>
         {children}
       </Swipeable>
     </GestureHandlerRootView>
