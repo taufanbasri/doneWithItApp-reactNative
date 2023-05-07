@@ -1,12 +1,13 @@
-import Icon from './app/components/Icon';
 import Screen from './app/components/Screen';
+import ListItem from './app/components/ListItem'
+import Icon from './app/components/Icon';
 
 export default function App() {
   return (
     <Screen>
-      <Icon
-        name='email'
-        size={100}
+      <ListItem
+        title='My Title'
+        ImageComponent={<Icon name='email' />}
       />
     </Screen>
   );
