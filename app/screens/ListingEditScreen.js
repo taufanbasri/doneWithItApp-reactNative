@@ -2,6 +2,7 @@ import { StyleSheet, Text } from 'react-native'
 import * as Yup from 'yup'
 import Screen from '../components/Screen'
 import { AppForm, AppFormField, AppFormPicker, SubmitButton } from '../components/forms'
+import CategoryPickerItem from '../components/CategoryPickerItem'
 
 const validationSchema = Yup.object().shape({
   title: Yup.string().required().min(1).label('Title'),
@@ -11,9 +12,9 @@ const validationSchema = Yup.object().shape({
 })
 
 const categories = [
-  { label: 'Furniture', value: 1 },
-  { label: 'Clothing', value: 2 },
-  { label: 'Camera', value: 3 },
+  { label: 'Furniture', value: 1, backgroundColor: 'red', icon: 'apps' },
+  { label: 'Clothing', value: 2, backgroundColor: 'green', icon: 'email' },
+  { label: 'Camera', value: 3, backgroundColor: 'blue', icon: 'lock' },
 ]
 
 const ListingEditScreen = () => {
@@ -36,7 +37,13 @@ const ListingEditScreen = () => {
           placeholder='Price'
           width={120}
         />
-        <AppFormPicker items={categories} name='category' placeholder='Category' width='50%' />
+        <AppFormPicker
+          numberOfColumns={3}
+          PickerItemComponent={CategoryPickerItem}
+          items={categories}
+          name='category'
+          placeholder='Category' width='50%'
+        />
         <AppFormField maxLength={255} multiline name='description' numberOfLines={3} placeholder='Description' />
 
         <SubmitButton title='Post' />
