@@ -2,8 +2,7 @@ import { Formik } from 'formik'
 import { Image, StyleSheet } from 'react-native'
 import * as Yup from 'yup'
 import AppButton from '../components/AppButton'
-import AppTextInput from '../components/AppTextInput'
-import ErrorMessage from '../components/ErrorMessage'
+import AppFormField from '../components/AppFormField'
 import Screen from '../components/Screen'
 
 const validationSchema = Yup.object().shape({
@@ -23,29 +22,25 @@ const LoginScreen = () => {
       >
         {({ handleChange, handleSubmit, errors, setFieldTouched, touched }) => (
           <>
-            <AppTextInput
-              onBlur={() => setFieldTouched('email')}
+            <AppFormField
+              name='email'
               autoCapitalize='none'
               autoCorrect={false}
               icon='email'
               keyboardType='email-address'
-              onChangeText={handleChange('email')}
               placeholder='Email'
               textContentType='emailAddress'
             />
-            <ErrorMessage error={errors.email} visible={touched.email} />
 
-            <AppTextInput
-              onBlur={() => setFieldTouched('password')}
+            <AppFormField
+              name='password'
               autoCapitalize='none'
               autoCorrect={false}
               icon='lock'
-              onChangeText={handleChange('password')}
               placeholder='Password'
               secureTextEntry={true}
               textContentType='password'
             />
-            <ErrorMessage error={errors.password} visible={touched.password} />
 
             <AppButton title='Login' onPress={handleSubmit} />
           </>
