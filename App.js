@@ -15,6 +15,8 @@ export default function App() {
   return (
     <Screen>
       <AppPicker
+        selectedItem={category}
+        onSelectItem={item => setCategory(item)}
         items={categories}
         icon='apps'
         placeholder='Category'
