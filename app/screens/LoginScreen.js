@@ -20,7 +20,7 @@ const LoginScreen = () => {
         onSubmit={values => console.log(values)}
         validationSchema={validationSchema}
       >
-        {({ handleChange, handleSubmit, errors, setFieldTouched, touched }) => (
+        {({ handleSubmit }) => (
           <>
             <AppFormField
               name='email'
