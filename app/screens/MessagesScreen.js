@@ -14,8 +14,8 @@ const initialMessages = [
   },
   {
     id: 2,
-    title: 'T2',
-    description: 'D2',
+    title: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia tempora iste voluptatibus autem, qui sint ullam nihil doloremque. Accusamus deleniti eius rerum tempore illo voluptatum vero aliquid perferendis sit at quia quasi voluptatibus, ipsa debitis, impedit ipsum, eaque atque voluptatem! Eveniet laudantium, deserunt id dolorum fugit molestiae impedit dignissimos odit!',
+    description: 'Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia tempora iste voluptatibus autem, qui sint ullam nihil doloremque. Accusamus deleniti eius rerum tempore illo voluptatum vero aliquid perferendis sit at quia quasi voluptatibus, ipsa debitis, impedit ipsum, eaque atque voluptatem! Eveniet laudantium, deserunt id dolorum fugit molestiae impedit dignissimos odit!Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quia tempora iste voluptatibus autem, qui sint ullam nihil doloremque. Accusamus deleniti eius rerum tempore illo voluptatum vero aliquid perferendis sit at quia quasi voluptatibus, ipsa debitis, impedit ipsum, eaque atque voluptatem! Eveniet laudantium, deserunt id dolorum fugit molestiae impedit dignissimos odit!',
     image: require('../assets/profile.png')
   },
   {
