@@ -1,5 +1,5 @@
 import { StyleSheet } from 'react-native'
-import AppTextInput from '../AppTextInput'
+import TextInput from '../TextInput'
 import ErrorMessage from './ErrorMessage'
 import { useFormikContext } from 'formik'
 
@@ -8,7 +8,7 @@ const AppFormField = ({ name, width, ...otherProps }) => {
 
   return (
     <>
-      <AppTextInput
+      <TextInput
         onBlur={() => setFieldTouched(name)}
         onChangeText={handleChange(name)}
         width={width}
