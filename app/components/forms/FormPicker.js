@@ -1,5 +1,5 @@
 import { useFormikContext } from 'formik'
-import AppPicker from '../AppPicker'
+import AppPicker from '../Picker'
 import ErrorMessage from './ErrorMessage'
 
 const AppFormPicker = ({ items, name, placeholder, width, PickerItemComponent, numberOfColumns }) => {

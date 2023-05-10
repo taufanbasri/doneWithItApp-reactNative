@@ -1,6 +1,6 @@
 import { StyleSheet, View } from "react-native"
 import Icon from "./Icon"
-import AppText from "./AppText"
+import AppText from "./Text"
 
 const CategoryPickerItem = ({ item, onPress }) => {
   return <View style={styles.container}>

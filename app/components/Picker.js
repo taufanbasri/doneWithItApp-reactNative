@@ -1,7 +1,7 @@
 import { MaterialCommunityIcons } from "@expo/vector-icons";
 import { Button, FlatList, Modal, StyleSheet, TouchableWithoutFeedback, View } from 'react-native';
 import defaultStyles from '../config/styles';
-import AppText from "./AppText";
+import AppText from "./Text";
 import { useState } from "react";
 import PickerItem from "./PickerItem";
 
